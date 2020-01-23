@@ -8,7 +8,7 @@ function rollDice()
 function play()
 {
 	/*create variables in order to count and roll dice*/
-	var firstBet = document.forms["luckySevens"]["bet"].value;
+	var firstBet = Number(document.forms["luckySevens"]["bet"].value);
 	var money = firstBet;
 	var diceOne;
  	var diceTwo;
@@ -51,20 +51,18 @@ function play()
 					/*count rolls at highest*/
 					Maxrolls = rolls;
 				}
-				console.log("win");
 			}
 			else
 			{
-				/*subtract 1 from the money and log a loss*/
+				/*subtract 1 from the money */
 				money --;
-				console.log("lose");
 			}
 		}
 	}
 	
 	/*return the values we want to display*/
 	document.getElementById("results").style.display = "block";
-	document.getElementById("startingBet").innerText  = "$"+firstBet;
+	document.getElementById("startingBet").innerText  = "$"+firstBet.toFixed(2);
 	document.getElementById("totalrollsResult").innerText  = rolls;
 	document.getElementById("highestamountResult").innerText  = "$"+winnings.toFixed(2);
 	document.getElementById("countathighestamountResult").innerText  = Maxrolls;
