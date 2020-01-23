@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<!-- title and link to javascript file to return results-->
+		<title>Lucky Sevens</title>
+		<script type="text/JavaScript" src="luckySevens.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+			rel="stylesheet" type="text/css"/>
+	</head>
+	<body>
+		<!--container to align game
+		game defaults to 0.00
+		has a play button to submit
+		on play, javascript is run using the initial bet
+		-->
+		<div class="container" align="center">
+		<h1>Lucky Sevens</h1>
+			<form name="luckySevens" onsubmit="return play();">
+					<div class="form-group">
+						<label for="bet">Starting Bet</label>
+						<input type="number" class="form-control" id="bet" value="0.00">
+					</div>          
+					<button type="play" id="playButton" class="btn btn-default">Play</button>
+			</form>
+		</div>
+		<hr/>
+		<!--
+		container containing the table of results
+		results including the initial bet
+		total number of rolls before going broke
+		maximum amount won
+		number of rolls at the maximum winnings
+		-->
+		<div class="container" align="center">
+			<table id="results" class="table table-striped" style="display:none;">
+			<thead>
+				<tr>
+					<th>Results</th>
+				</tr>
+			</thead>
+					<tr>
+						<td>Starting Bet</td>
+						<td><span id="startingBet"></span></td>
+					</tr>
+					<tr>
+						<td>Total Rolls before going Broke</td>
+						<td><span id="totalrollsResult"></span></td>
+					</tr>
+					<tr>
+						<td>Highest Amount Won</td>
+						<td><span id="highestamountResult"></span></td>
+					</tr>
+					<tr>
+						<td>Roll Count at Highest Amount Won</td>
+						<td><span id="countathighestamountResult"></span></td>
+					</tr>		
+			</table>
+		</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<footer align="center">
+					<p>&copy; 2020 Caleb Ryberg. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>

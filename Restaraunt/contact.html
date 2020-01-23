@@ -1,0 +1,219 @@
+<!DOCTYPE html> 
+<!--
+    Name: Caleb Ryberg  
+    Most recent revision: 1/22/2020
+-->
+<html lang="en"> 
+	<!-- 1. jumbotron for a new location 2. slideshow not included as unnecessary in contact page
+	3. use bootstrap grid system to create bootstrap form 4. validate in javascript ... restaraunt.js
+	5. javascript should show a positive message for name, email, and phone 6. default to catering
+	-->
+	<header>
+		<head>
+			<!--meta to shrink site to fit on any screen-->
+		    <meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<title>Classico`</title>		
+			<title>Contact Us</title>
+			<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<!--link to the validation javascript-->
+			<script type="text/JavaScript" src="restaraunt.js"></script>
+			<!--link to the stylesheet-->
+			<link href="styles/restarauntStyles.css" rel="stylesheet" type="text/css" />
+			<style>
+			</style>		
+		</head>
+	</header>
+
+    <body>
+	<!--jumbotron announcing new location-->
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Opening a NEW LOCATION!!!</h1>
+				<p>Located in Des Moines, Iowa</p>
+			</div>
+		</div>
+		<!--container for title of restaraunt-->
+		<div class="container">
+			<h1 align="center"font= "georgia, serif">Classico`</h1>
+		</div>
+		<hr />
+		
+		<!--make navigation buttons pill and home a house icon-->
+		<nav>
+			<div class="container">
+				<div class="pill-nav">
+				<!-- The nav element will include navigation buttons or links -->
+					<p><a href="index.html"><i class="fa fa-home"></i></a><a href="menu.html">Menu</a></p>
+				<hr />
+				</div>
+			</div>
+		</nav>
+		<!--create a bootstrap form that requires elements to be validated with javascript
+		the items will give a positive or negative validation for required items
+		Obtained from bootstrap https://mdbootstrap.com/docs/jquery/forms/validation/ -->
+		<form class="needs-validation" novalidate>
+			<div class="row justify-content-center">
+				<label for="inputName" class="col-sm-2 col-form-label">Name</label>
+				<div class="col-sm-4">
+					<input type="name" class="form-control" id="inputName" placeholder="Name" required>
+					<div class="invalid-feedback">
+						Please enter your name
+					</div>			
+					<div class="valid-feedback">
+						Looks good
+					</div>
+				</div>
+			</div>
+			</br>
+			<div class="row justify-content-center">
+				<label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+				<div class="col-sm-4">
+					<input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+					<div class="invalid-feedback">
+						Please enter a valid email
+					</div>
+					<div class="valid-feedback">
+						Looks good
+					</div>				
+				</div>
+			</div>
+			</br>
+			<div class="row justify-content-center">
+				<label for="phoneNumber" class="col-sm-2 col-form-label">Phone Number</label>
+				<div class="col-sm-4">
+					<input type="phone" class="form-control" id="inputPhone" placeholder="Phone" required>
+					<div class="invalid-feedback">
+						Please enter a valid phone number
+					</div>
+					<div class="valid-feedback">
+						Looks good
+					</div>
+				</div>
+			</div>
+			</br>
+			<!--textarea in the form for additional information-->
+			<div class="row justify-content-center">
+				<label for="additionalInfo" class="col-sm-2 col-form-label">Additional Information</label>
+				<div class="col-sm-4">
+					<textarea type="info" class="form-control" id="inputInfo" placeholder="Info"></textarea>
+				</div>
+			</div>
+			</br>
+			<!--use a drop-down menu for the reason for inquiry, default set to catering-->
+			<div class="row justify-content-center">
+				<label for="inputReason" class="col-sm-2 col-form-label">Reason for inquiry</label>
+				<div class="col-sm-4">
+				<select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectReas">
+					<option selected>Catering</option>
+					<option value="1">Private Party</option>
+					<option value="2">Feedback</option>
+					<option value="3">Other</option>
+				</select>
+				</div>
+			</div>
+			</br>
+			<!--radio buttons to ask if they have been to the restaraunt before-->
+			<div class="row justify-content-center">
+				<legend class="col-form-label col-sm-4 pt-0">Have you been to the restaraunt?</legend>
+				<div class="col-sm-2">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+						<label class="form-check-label" for="gridRadios1">Yes</label>
+					</div>
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+					  <label class="form-check-label" for="gridRadios2">No</label>
+					</div>
+				</div>
+			</div>
+			</br>
+			<!--checkbox options for the best days to contact, no options is considered anytime-->
+			<fieldset class="form-group">
+				<div class="row justify-content-center">
+					<div class="col-sm-3">What are the best days to contact you?</div>
+					<div class="col-sm-1">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1">Monday</label>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1">Tuesday</label>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1">Wednesday</label>
+						</div>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-sm-3"></div>
+					<div class="col-sm-1">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1">Thursday</label>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1">Friday</label>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1">Saturday</label>
+						</div>
+					</div>
+					<div class="col-sm-1">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" id="gridCheck1">
+							<label class="form-check-label" for="gridCheck1">Sunday</label>
+						</div>
+					</div>
+				</div>
+			</fieldset>
+			</br>
+			<!--submit info button-->
+			<div class="row justify-content-center">
+				<button type="submit" class="btn btn-primary">Send Request</button>
+			</div>
+		</form>
+		<hr/>
+		<!--container for the address, phone and below for the footer-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<p>112 State Street, Madison, WI, 53782</p>
+			</div>
+			<div class="row justify-content-center">
+				<p>Telephone Number:608-397-1021</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<footer align="center">
+					<p>&copy; 2020 Caleb Ryberg. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+		<!--notify the site is best viewed with javascript enabled-->
+		<noscript>
+			<div class="error message">
+				Our site is best used with JavaScript enabled.
+			</div>    
+		</noscript>
+		
+		 <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body> 
+</html>

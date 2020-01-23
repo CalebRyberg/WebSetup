@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+    Name: Caleb Ryberg  
+    Most recent revision: 1/22/2020
+-->
+<html lang="en">
+	<!-- 1. jumbotron included 2. slideshow included 3. items are stacked in a boostrap grid system so they stack well
+	4. home link is house icon 5. notify viewer best viewed with javascript-->
+	<header>
+		<head>
+			<!--meta to shrink site to fit on any screen-->
+		    <meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<title>Classico`</title>
+			<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<!--reference to the style sheet used-->
+			<link href="styles/restarauntStyles.css" rel="stylesheet" type="text/css" />
+		</head>
+		<style>
+		</style>
+	</header>
+
+	<body>
+		<!--container to create jumbotron-->
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Opening a NEW LOCATION!!!</h1>
+				<p>Located in Des Moines, Iowa</p>
+			</div>
+		</div>
+		<!--container for the title-->
+		<div class="container">
+			<h1 align="center"font= "georgia, serif">Classico`</h1>
+		</div>
+		<hr />
+		<!--create a slideshow/carousel container to rotate through 3 images with captions
+		images come from https://pixabay.com/images/search/restaraunt/ -->
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+					<img src="images/place.jpg" style="width:100%">
+				<div class="text"><h4><b>We're opening a new location!</b></h4></div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+					<img src="images/dish.jpg" style="width:100%">
+				<div class="text"><h4><b>We're rolling out our seasonal menu, with special options for this season.</b></h4></div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+					<img src="images/beer.jpg" style="width:100%">
+				<div class="text"><h4><b>The Drink of the Month is SG Special Brew.</b></h4></div>
+			</div>
+		</div>
+		<!--dots at the bottom of the images to notify which picture in the slideshow you are viewing-->
+		<br>
+		<div style="text-align:center">
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+		</div>
+		<!--make navigation buttons pill and home a house icon-->
+		<nav>
+			<div class="container">
+				<div class="pill-nav">
+				<!-- The nav element will include navigation buttons or links -->
+					<p><a href="index.html"><i class="fa fa-home"></i></a><a href="contact.html">Contact</a></p>
+				<hr />
+				</div>
+			</div>
+		</nav>
+		<!--create a bootstrap table to form the food menu items with names, descriptions, and prices-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 align="center"font= "georgia, serif">Food</h2>
+				</div>
+				<div class="col-lg-4">
+					<h6 style="font-size: large">Burger and Fries</h6>
+					<p>An American Classic! Your choice - with or without cheese, pickle, onion, tomato, and lettuce. Served with our famous thick cut french fries</p>
+					<p>$7.95</p>
+				</div>
+				<div class="col-lg-4">
+					<h6 style="font-size: large">Hot Dog and Chips</h6>
+					<p>A Summer Classic! Your choice - white or wheat bun, relish, mustard, and ketchup. Served with our house-made chips</p>
+					<p>$7.95</p>
+				</div>
+				<div class="col-lg-4">
+					<h6 style="font-size: large">Italian Sausage and Peppers</h6>
+					<p>An American Classic! Your choice - with or without cheese, pickle, onion, tomato, and lettuce. Served with our famous thick cut french fries</p>
+					<p>$10.95</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4">
+					<h6 style="font-size: large">Tenderloin Sandwich and Chips</h6>
+					<p>Really Hits the Spot! Plain or sesame seed bun, pickle, onion, tomato, lettuce. Served with our house-made chips</p>
+					<p>$8.95</p>
+				</div>
+				<div class="col-lg-4">
+					<h6 style="font-size: large">House Salad</h6>
+					<p>On the Lighter Side! Your choice - with or without cheese, iceberg lettuce, tomatoes, pepers, Thousand Island or Ranch dressing. Served with a dinner roll</p>
+					<p>$6.95</p>
+				</div>
+				<div class="col-lg-4">
+					<h6 style="font-size: large">Brisket Sandwich and Fries</h6>
+					<p>A Taste of Texas! Smoked Brisket on thick-cut Texax Toast and cole slaw. Served with our famous thick-cut french fries</p>
+					<p>$7.95</p>
+				</div>
+			</div>
+		</div>
+		<!-- Create a table with a title for beverages that is in a container to conform with boostrapping-->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2 align="center"font= "georgia, serif">Beverages</h2>
+				</div>
+				<div class="col-lg-3">
+					<h6 style="font-size: large">Root Beer</h6>
+					<p>$3.00</p>
+				</div>
+				<div class="col-lg-3">
+					<h6 style="font-size: large">Bottled Water</h6>
+					<p>$1.25</p>
+				</div>
+				<div class="col-lg-3">
+					<h6 style="font-size: large">Lemonade</h6>
+					<p>$1.00</p>
+				</div>
+				<div class="col-lg-3">
+					<h6 style="font-size: large">Iced Tea</h6>
+					<p>$1.25</p>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<!-- create the address and contact number container with a footer for copywrite-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<p>112 State Street, Madison, WI, 53782</p>
+			</div>
+			<div class="row justify-content-center">
+				<p>Telephone Number: 608-397-1021</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<footer align="center">
+					<p>&copy; 2020 Caleb Ryberg. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+		<!-- notify the site should have javascript enabled-->
+		<noscript>
+			<div class="error message">
+				Our site is best used with JavaScript enabled.
+			</div>    
+		</noscript>
+		<!-- javascript that creates a carousel/slideshow of 3 different images based on a time, then rotate to next image.-->
+		<script>
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() 
+			{
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) 
+				{
+					slides[i].style.display = "none";  
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {slideIndex = 1}    
+				for (i = 0; i < dots.length; i++) 
+				{
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+				setTimeout(showSlides, 8000); // Change image every 2 seconds
+			}
+		</script>
+		 <!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>
+</html>
+
+	

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!--
+    Name: Caleb Ryberg  
+    Most recent revision: 1/22/2020
+-->
+<html lang="en">
+	<!-- 1. Implements Bootstrap 2. implements bootstrap grid 3. Icons are pills 
+	4. Home is a house icon 5. Jumbotron says new location 6. Carousel/slideshow rotates through 3 images with announcements
+	7. notify to have javascript enabled -->
+	<header>
+		<head>
+			<!--meta to shrink site to fit on any screen-->
+		    <meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<title>Classico`</title>
+			
+			<!-- Bootstrap CDN copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<!--link to the overall style sheet-->
+			<link href="styles/restarauntStyles.css" rel="stylesheet" type="text/css" />
+		</head>
+	</header>
+	
+	<body>
+		<!--created container to hold jumbotron, locate at top of the page-->
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Opening a NEW LOCATION!!!</h1>
+				<p>Located in Des Moines, Iowa</p>
+			</div>
+		</div>
+		<!--Title/Restaurant name-->
+		<div class="container">
+			<h1 align="center"font= "georgia, serif">Classico`</h1>
+		</div>
+		<hr />
+		
+		<!--create a slideshow/carousel container to rotate through 3 images with captions
+		images come from https://pixabay.com/images/search/restaraunt/ -->
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="numbertext">1 / 3</div>
+					<img src="images/place.jpg" style="width:100%">
+				<div class="text"><h4><b>We're opening a new location!</b></h4></div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 3</div>
+					<img src="images/dish.jpg" style="width:100%">
+				<div class="text"><h4><b>We're rolling out our seasonal menu, with special options for this season.</b></h4></div>
+			</div>
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 3</div>
+					<img src="images/beer.jpg" style="width:100%">
+				<div class="text"><h4><b>The Drink of the Month is SG Special Brew.</b></h4></div>
+			</div>
+		</div>
+		<!--dots at the bottom of the images to notify which picture in the slideshow you are viewing-->
+		<br>
+		<div style="text-align:center">
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+		</div>
+		<!-- We need to add links to 
+		menu.html, contact.html -->
+		<nav>
+			<div class="container">
+				<div class="pill-nav">
+				<!-- The nav element will include navigation buttons or links -->
+					<p><a href="menu.html">Menu</a><a href="contact.html">Contact</a></p>
+				<hr />
+				</div>
+			</div>
+		</nav>
+		<!--create a container for the Restaurant image with a description below it and make it centered-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<a href="images/restaurantnt1.jpg"><img src="images/restaurant1.jpg" alt="Restaraunt Picture"/></a>
+			</div>
+			<div class="row justify-content-center">
+				<p><b>Restaraunt Description</b></p>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<p>Welcome to Classico`! You guessed it, here is where you will endulge in classic recipes of America. Did we throw you off, did you think this was an elegant
+					Italian restaurant? You're not alone... that is one of our many intelligent marketing aspects. We do however pride ourselves on our classics like the Hot Dog
+					and Burger. These may be tasty dishes but a bit heavy, in which case our House Salad will do the trick. If you are feeling for something a little different
+					be sure to try our Tenderloin Sandwich which is always sure to satisfy. Don't leave before trying one of our in-house brews as they have one many awards throughout
+					the Midwest and have been on many TV shows such as Brewmaster's. Enjoy our subtle dinner atmosphere or travel over to the bar to catch the game.
+					Either way you look at it, Classico` is a classic!</p>
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<!--container with the address and phone of the restaurant-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<p>112 State Street, Madison, WI, 53782</p>
+			</div>
+			<div class="row justify-content-center">
+				<p>Telephone Number: 608-397-1021</p>
+			</div>
+		</div>
+		<!--container for the footer copy-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<footer align="center">
+					<p>&copy; 2020 Caleb Ryberg. All rights reserved.</p>
+				</footer>
+			</div>
+		</div>
+		<!--notify the user that the site is viewed best with javascript enabled-->
+		<noscript>
+			<div class="error message">
+				Our site is best used with JavaScript enabled.
+			</div>    
+		</noscript>
+		<!--javascript to create an automatic slideshow/carousel
+		each slide will fade out and into the next in a matter of seconds desired
+		examples can be found here https://mdbootstrap.com/docs/jquery/javascript/carousel/ -->
+		<script>
+			var slideIndex = 0;
+			showSlides();
+
+			function showSlides() 
+			{
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				for (i = 0; i < slides.length; i++) 
+				{
+					slides[i].style.display = "none";  
+				}
+				slideIndex++;
+				if (slideIndex > slides.length) {slideIndex = 1}    
+				for (i = 0; i < dots.length; i++) 
+				{
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block";  
+				dots[slideIndex-1].className += " active";
+				setTimeout(showSlides, 8000); // Change image every 2 seconds
+			}
+		</script>
+		<!-- CDN links copied from https://getbootstrap.com/docs/4.1/getting-started/introduction/ -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	</body>	
+</html>
